@@ -14,7 +14,6 @@ class QuestionMainModel with _$QuestionMainModel {
     required InteractionDataModel interactionModule,
     required List<PostInteractionDataModel> postInteraction,
     required String type,
-
   }) = _QuestionMainModel;
 
   factory QuestionMainModel.fromJson(Map<String, dynamic> json) =>
