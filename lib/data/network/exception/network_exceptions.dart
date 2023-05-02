@@ -52,6 +52,9 @@ class NetworkExceptions with _$NetworkExceptions {
   const factory NetworkExceptions.defaultError(final String error) =
   DefaultError;
 
+  const factory NetworkExceptions.parsingError(final String error) =
+  ParsingError;
+
   const factory NetworkExceptions.unexpectedError() = UnexpectedError;
 
   const factory NetworkExceptions.wrongVerification() = WrongVerification;
@@ -184,6 +187,9 @@ class NetworkExceptions with _$NetworkExceptions {
       },
       wrongPassword: () {
         errorMessage = 'Your password is wrong.';
+      },
+      parsingError: (String error) {
+        errorMessage = 'Parsing Json Exception $error';
       },
     );
 
