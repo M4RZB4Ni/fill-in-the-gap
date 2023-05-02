@@ -25,7 +25,7 @@ mixin _$PostInteractionDataModel {
   String get type => throw _privateConstructorUsedError;
   int get order => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
-  String get visibleIf => throw _privateConstructorUsedError;
+  String get visiableIf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -39,7 +39,8 @@ abstract class $PostInteractionDataModelCopyWith<$Res> {
           $Res Function(PostInteractionDataModel) then) =
       _$PostInteractionDataModelCopyWithImpl<$Res, PostInteractionDataModel>;
   @useResult
-  $Res call({String text, String type, int order, String id, String visibleIf});
+  $Res call(
+      {String text, String type, int order, String id, String visiableIf});
 }
 
 /// @nodoc
@@ -60,7 +61,7 @@ class _$PostInteractionDataModelCopyWithImpl<$Res,
     Object? type = null,
     Object? order = null,
     Object? id = null,
-    Object? visibleIf = null,
+    Object? visiableIf = null,
   }) {
     return _then(_value.copyWith(
       text: null == text
@@ -79,9 +80,9 @@ class _$PostInteractionDataModelCopyWithImpl<$Res,
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      visibleIf: null == visibleIf
-          ? _value.visibleIf
-          : visibleIf // ignore: cast_nullable_to_non_nullable
+      visiableIf: null == visiableIf
+          ? _value.visiableIf
+          : visiableIf // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -96,7 +97,8 @@ abstract class _$$_PostInteractionDataModelCopyWith<$Res>
       __$$_PostInteractionDataModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String text, String type, int order, String id, String visibleIf});
+  $Res call(
+      {String text, String type, int order, String id, String visiableIf});
 }
 
 /// @nodoc
@@ -115,7 +117,7 @@ class __$$_PostInteractionDataModelCopyWithImpl<$Res>
     Object? type = null,
     Object? order = null,
     Object? id = null,
-    Object? visibleIf = null,
+    Object? visiableIf = null,
   }) {
     return _then(_$_PostInteractionDataModel(
       text: null == text
@@ -134,9 +136,9 @@ class __$$_PostInteractionDataModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      visibleIf: null == visibleIf
-          ? _value.visibleIf
-          : visibleIf // ignore: cast_nullable_to_non_nullable
+      visiableIf: null == visiableIf
+          ? _value.visiableIf
+          : visiableIf // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -150,7 +152,7 @@ class _$_PostInteractionDataModel implements _PostInteractionDataModel {
       required this.type,
       required this.order,
       required this.id,
-      required this.visibleIf});
+      required this.visiableIf});
 
   factory _$_PostInteractionDataModel.fromJson(Map<String, dynamic> json) =>
       _$$_PostInteractionDataModelFromJson(json);
@@ -164,11 +166,11 @@ class _$_PostInteractionDataModel implements _PostInteractionDataModel {
   @override
   final String id;
   @override
-  final String visibleIf;
+  final String visiableIf;
 
   @override
   String toString() {
-    return 'PostInteractionDataModel(text: $text, type: $type, order: $order, id: $id, visibleIf: $visibleIf)';
+    return 'PostInteractionDataModel(text: $text, type: $type, order: $order, id: $id, visiableIf: $visiableIf)';
   }
 
   @override
@@ -180,14 +182,14 @@ class _$_PostInteractionDataModel implements _PostInteractionDataModel {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.order, order) || other.order == order) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.visibleIf, visibleIf) ||
-                other.visibleIf == visibleIf));
+            (identical(other.visiableIf, visiableIf) ||
+                other.visiableIf == visiableIf));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, text, type, order, id, visibleIf);
+      Object.hash(runtimeType, text, type, order, id, visiableIf);
 
   @JsonKey(ignore: true)
   @override
@@ -210,7 +212,7 @@ abstract class _PostInteractionDataModel implements PostInteractionDataModel {
       required final String type,
       required final int order,
       required final String id,
-      required final String visibleIf}) = _$_PostInteractionDataModel;
+      required final String visiableIf}) = _$_PostInteractionDataModel;
 
   factory _PostInteractionDataModel.fromJson(Map<String, dynamic> json) =
       _$_PostInteractionDataModel.fromJson;
@@ -224,7 +226,7 @@ abstract class _PostInteractionDataModel implements PostInteractionDataModel {
   @override
   String get id;
   @override
-  String get visibleIf;
+  String get visiableIf;
   @override
   @JsonKey(ignore: true)
   _$$_PostInteractionDataModelCopyWith<_$_PostInteractionDataModel>

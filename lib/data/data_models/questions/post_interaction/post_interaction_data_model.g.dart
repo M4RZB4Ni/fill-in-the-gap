@@ -13,7 +13,7 @@ _$_PostInteractionDataModel _$$_PostInteractionDataModelFromJson(
       type: json['type'] as String,
       order: json['order'] as int,
       id: json['id'] as String,
-      visibleIf: json['visibleIf'] as String,
+      visiableIf: json['visiableIf'] as String,
     );
 
 Map<String, dynamic> _$$_PostInteractionDataModelToJson(
@@ -23,5 +23,5 @@ Map<String, dynamic> _$$_PostInteractionDataModelToJson(
       'type': instance.type,
       'order': instance.order,
       'id': instance.id,
-      'visibleIf': instance.visibleIf,
+      'visiableIf': instance.visiableIf,
     };

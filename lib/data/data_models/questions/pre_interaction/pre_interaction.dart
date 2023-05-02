@@ -10,7 +10,7 @@ class PreInteractionModel with _$PreInteractionModel {
     required String type,
     required int order,
     required String id,
-    required String visibleIf,
+    required String visiableIf,
   }) = _PreInteractionModel;
 
   factory PreInteractionModel.fromJson(Map<String, dynamic> json) =>

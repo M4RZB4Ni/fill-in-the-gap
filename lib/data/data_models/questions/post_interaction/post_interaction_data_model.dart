@@ -11,7 +11,7 @@ class PostInteractionDataModel with _$PostInteractionDataModel {
     required String type,
     required int order,
     required String id,
-    required String visibleIf,
+    required String visiableIf,
   }) = _PostInteractionDataModel;
 
   factory PostInteractionDataModel.fromJson(Map<String, dynamic> json) =>

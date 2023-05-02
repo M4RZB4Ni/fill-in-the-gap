@@ -24,7 +24,7 @@ mixin _$PreInteractionModel {
   String get type => throw _privateConstructorUsedError;
   int get order => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
-  String get visibleIf => throw _privateConstructorUsedError;
+  String get visiableIf => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -38,7 +38,8 @@ abstract class $PreInteractionModelCopyWith<$Res> {
           PreInteractionModel value, $Res Function(PreInteractionModel) then) =
       _$PreInteractionModelCopyWithImpl<$Res, PreInteractionModel>;
   @useResult
-  $Res call({String text, String type, int order, String id, String visibleIf});
+  $Res call(
+      {String text, String type, int order, String id, String visiableIf});
 }
 
 /// @nodoc
@@ -58,7 +59,7 @@ class _$PreInteractionModelCopyWithImpl<$Res, $Val extends PreInteractionModel>
     Object? type = null,
     Object? order = null,
     Object? id = null,
-    Object? visibleIf = null,
+    Object? visiableIf = null,
   }) {
     return _then(_value.copyWith(
       text: null == text
@@ -77,9 +78,9 @@ class _$PreInteractionModelCopyWithImpl<$Res, $Val extends PreInteractionModel>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      visibleIf: null == visibleIf
-          ? _value.visibleIf
-          : visibleIf // ignore: cast_nullable_to_non_nullable
+      visiableIf: null == visiableIf
+          ? _value.visiableIf
+          : visiableIf // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -93,7 +94,8 @@ abstract class _$$_PreInteractionModelCopyWith<$Res>
       __$$_PreInteractionModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String text, String type, int order, String id, String visibleIf});
+  $Res call(
+      {String text, String type, int order, String id, String visiableIf});
 }
 
 /// @nodoc
@@ -111,7 +113,7 @@ class __$$_PreInteractionModelCopyWithImpl<$Res>
     Object? type = null,
     Object? order = null,
     Object? id = null,
-    Object? visibleIf = null,
+    Object? visiableIf = null,
   }) {
     return _then(_$_PreInteractionModel(
       text: null == text
@@ -130,9 +132,9 @@ class __$$_PreInteractionModelCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      visibleIf: null == visibleIf
-          ? _value.visibleIf
-          : visibleIf // ignore: cast_nullable_to_non_nullable
+      visiableIf: null == visiableIf
+          ? _value.visiableIf
+          : visiableIf // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -146,7 +148,7 @@ class _$_PreInteractionModel implements _PreInteractionModel {
       required this.type,
       required this.order,
       required this.id,
-      required this.visibleIf});
+      required this.visiableIf});
 
   factory _$_PreInteractionModel.fromJson(Map<String, dynamic> json) =>
       _$$_PreInteractionModelFromJson(json);
@@ -160,11 +162,11 @@ class _$_PreInteractionModel implements _PreInteractionModel {
   @override
   final String id;
   @override
-  final String visibleIf;
+  final String visiableIf;
 
   @override
   String toString() {
-    return 'PreInteractionModel(text: $text, type: $type, order: $order, id: $id, visibleIf: $visibleIf)';
+    return 'PreInteractionModel(text: $text, type: $type, order: $order, id: $id, visiableIf: $visiableIf)';
   }
 
   @override
@@ -176,14 +178,14 @@ class _$_PreInteractionModel implements _PreInteractionModel {
             (identical(other.type, type) || other.type == type) &&
             (identical(other.order, order) || other.order == order) &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.visibleIf, visibleIf) ||
-                other.visibleIf == visibleIf));
+            (identical(other.visiableIf, visiableIf) ||
+                other.visiableIf == visiableIf));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode =>
-      Object.hash(runtimeType, text, type, order, id, visibleIf);
+      Object.hash(runtimeType, text, type, order, id, visiableIf);
 
   @JsonKey(ignore: true)
   @override
@@ -206,7 +208,7 @@ abstract class _PreInteractionModel implements PreInteractionModel {
       required final String type,
       required final int order,
       required final String id,
-      required final String visibleIf}) = _$_PreInteractionModel;
+      required final String visiableIf}) = _$_PreInteractionModel;
 
   factory _PreInteractionModel.fromJson(Map<String, dynamic> json) =
       _$_PreInteractionModel.fromJson;
@@ -220,7 +222,7 @@ abstract class _PreInteractionModel implements PreInteractionModel {
   @override
   String get id;
   @override
-  String get visibleIf;
+  String get visiableIf;
   @override
   @JsonKey(ignore: true)
   _$$_PreInteractionModelCopyWith<_$_PreInteractionModel> get copyWith =>
