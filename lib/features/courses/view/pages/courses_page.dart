@@ -1,6 +1,6 @@
 import 'package:fill_in_the_gap/app/base/base_view.dart';
-import 'package:fill_in_the_gap/app/resources/app_colors.dart';
 import 'package:fill_in_the_gap/features/courses/domain/controllers/courses_controller.dart';
+import 'package:fill_in_the_gap/features/courses/view/widgets/app_course_item.dart';
 import 'package:flutter/material.dart';
 
 class CoursesPage extends BaseView<CoursesController>{
@@ -9,7 +9,13 @@ class CoursesPage extends BaseView<CoursesController>{
   @override
   Widget body(BuildContext context) {
     // TODO: implement body
-    return Container(color: AppColors.pink,);
+    return ListView(
+      children:  [
+        APPCourseItem(title: 'أساسيات HTML',subTitle: 'إنشاء صفحات الويب باستخدام علامات HTML',status: true,onTab:  () => controller.handleOnClick,),
+        APPCourseItem(title: 'أساسيات HTML',subTitle: 'إنشاء صفحات الويب باستخدام علامات HTML',status: false,onTab: () =>  controller.handleOnClick,),
+        APPCourseItem(title: 'أساسيات HTML',subTitle: 'إنشاء صفحات الويب باستخدام علامات HTML',status: false,onTab: () =>  controller.handleOnClick,),
+      ],
+    );
   }
 
 }

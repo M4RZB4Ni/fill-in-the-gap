@@ -17,6 +17,7 @@ class AppColors {
 
   static const textMainColor = Color(0xff040412);
   static const textSecondaryColor = Color(0xff6E7191);
+  static const textSecondaryColorDark = Color(0xff4E4B66);
   static const disabledButton = Color(0xffEFF0F6);
 
 
@@ -24,6 +25,7 @@ class AppColors {
 
   static const background = Color(0xffFBFAFF);
   static const pureWhite = Color(0xffFFFFFF);
+  static const pureBlack = Color(0xff000000);
 
 
 

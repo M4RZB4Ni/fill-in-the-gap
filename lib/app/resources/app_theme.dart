@@ -1,6 +1,6 @@
 import 'package:fill_in_the_gap/app/resources/app_colors.dart';
+import 'package:fill_in_the_gap/app/resources/app_text_style.dart';
 import 'package:flutter/material.dart';
-
 
 class AppThemes {
   ThemeData get lightTheme => ThemeData(
@@ -11,7 +11,11 @@ class AppThemes {
         disabledColor: AppColors.disabledButton,
 
         scaffoldBackgroundColor: AppColors.background,
-        textTheme: TextTheme(),
+        textTheme: TextTheme(
+            labelMedium: AppTextStyles.labelMedium,
+            labelSmall: AppTextStyles.labelSmall,
+            bodyMedium: AppTextStyles.body,
+            bodySmall: AppTextStyles.body1),
         // hintColor: 500.text,
         appBarTheme: const AppBarTheme(backgroundColor: AppColors.background),
       );

@@ -8,14 +8,10 @@ class AppPages {
     GetPage(
       name: Routes.courses,
       page: CoursesPage.new,
-      children: [
-
-        GetPage(
-          name: Routes.question,
-          page: QuestionsPage.new,
-        ),
-
-      ],
-    )
+    ),
+     GetPage(
+       name: Routes.question,
+       page: QuestionsPage.new,
+     ),
   ];
 }

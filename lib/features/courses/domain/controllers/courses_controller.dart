@@ -1,6 +1,8 @@
 import 'package:fill_in_the_gap/app/base/base_controller.dart';
 import 'package:fill_in_the_gap/app/messages/printers.dart';
+import 'package:fill_in_the_gap/app/routes/app_routes.dart';
 import 'package:fill_in_the_gap/features/courses/domain/repositories/courses_repository.dart';
+import 'package:get/get.dart';
 
 class CoursesController extends BaseController{
 
@@ -26,4 +28,8 @@ class CoursesController extends BaseController{
     },);
 
   }
+
+
+  void get handleOnClick =>Get.toNamed(Routes.question);
+
 }
