@@ -17,14 +17,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (context, child) => GetMaterialApp(
+      localizationsDelegates: [
+        DefaultMaterialLocalizations.delegate
+      ],
       title: 'Fill in the gap App',
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.courses,
       theme: AppThemes().lightTheme,
       defaultTransition: Transition.fade,
       initialBinding: MainBinding(),
-      supportedLocales: const [Locale('en')],
-      fallbackLocale: const Locale('en'),
+      supportedLocales: const [Locale('fa','IR')],
+      fallbackLocale: const Locale('fa','IR'),
       getPages: AppPages().pages,
     ),);
   }

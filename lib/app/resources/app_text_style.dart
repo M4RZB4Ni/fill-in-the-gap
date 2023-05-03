@@ -13,6 +13,13 @@ class AppTextStyles {
     color: AppColors.textMainColor,
   );
 
+  static final paragraph = TextStyle(
+    fontSize: 14.sp,
+    fontFamily: 'Noto Sans Arabic',
+    fontWeight: FontWeight.w500,
+    color: AppColors.textMainColor,
+  );
+
   static final labelSmall = TextStyle(
     fontSize: 13.sp,
     fontFamily: 'Noto Sans Arabic',
