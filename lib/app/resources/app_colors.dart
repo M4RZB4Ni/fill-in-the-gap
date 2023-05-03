@@ -26,6 +26,7 @@ class AppColors {
   static const background = Color(0xffFBFAFF);
   static const pureWhite = Color(0xffFFFFFF);
   static const pureBlack = Color(0xff000000);
+  static const grayItems = Color(0xffD9DBE9);
 
 
 
