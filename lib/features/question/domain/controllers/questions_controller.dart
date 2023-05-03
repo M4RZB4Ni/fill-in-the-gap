@@ -5,6 +5,7 @@ import 'package:fill_in_the_gap/app/resources/app_size.dart';
 import 'package:fill_in_the_gap/app/resources/app_spacing.dart';
 import 'package:fill_in_the_gap/app/resources/app_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class QuestionsController extends BaseController {
@@ -36,13 +37,15 @@ class QuestionsController extends BaseController {
   void findItemsAreBlank(String item)
   {
     deletedItem.add([interactionList.indexOf(item),item]);
-    logicItems.insert(visualItems.indexWhere((element) => element is Container),item);
+    logicItems.insert(visualItems.indexWhere((element) => element is Expanded),item);
 
-    deleteVisualIndex.add(visualItems.indexWhere((element) => element is Container));
-    deleteLogicIndex.add(visualItems.indexWhere((element) => element is Container));
-    visualItems[visualItems.indexWhere((element) => element is Container)] = Padding(
+    deleteVisualIndex.add(visualItems.indexWhere((element) => element is Expanded));
+    deleteLogicIndex.add(visualItems.indexWhere((element) => element is Expanded));
+    visualItems[visualItems.indexWhere((element) => element is Expanded)] = Padding(
       padding: const EdgeInsets.all(3.0),
-      child: Text(item,style: AppTextStyles.body1,),
+      child: Container(decoration: BoxDecoration(
+          color: AppColors.grayItems,
+          borderRadius: BorderRadius.circular(AppSize.s02)), child: Text(item,style: AppTextStyles.body1,)),
     );
 
     interactionList.removeAt(interactionList.indexOf(item));
@@ -54,13 +57,15 @@ class QuestionsController extends BaseController {
     if(deletedItem.isNotEmpty) {
       interactionList.insert(deletedItem.last.first, deletedItem.last.last);
       logicItems.removeAt(deleteLogicIndex.last);
-      visualItems[deleteVisualIndex.last]=Container(
-        width: AppSize.s18,
-        height: AppSize.s22,
-        margin: AppSpacing.s2Horizontal,
-        decoration: BoxDecoration(
-            color: AppColors.grayItems,
-            borderRadius: BorderRadius.circular(AppSize.s02)),
+      visualItems[deleteVisualIndex.last]=Expanded(
+        child: Container(
+          // width: AppSize.s18,
+          // height: AppSize.s22,
+          margin: AppSpacing.s2Horizontal,
+          decoration: BoxDecoration(
+              color: AppColors.grayItems,
+              borderRadius: BorderRadius.circular(AppSize.s02)),
+        ),
       );
       deletedItem.removeLast();
       deleteVisualIndex.removeLast();
@@ -80,13 +85,16 @@ class QuestionsController extends BaseController {
         if(interactionList.contains(element))
           {
             realDebugPrint('We found it $element');
-            visualItems.add(Container(
-              width: AppSize.s18,
-              height: AppSize.s22,
-              margin: AppSpacing.s2Horizontal,
-              decoration: BoxDecoration(
-                  color: AppColors.grayItems,
-                  borderRadius: BorderRadius.circular(AppSize.s02)),
+            visualItems.add(Expanded(
+              child: Container(
+                // width: AppSize.s18,
+                // height: AppSize.s22,
+                margin: AppSpacing.s2Horizontal,
+                constraints: BoxConstraints(minWidth: 18.w,minHeight: 22.h),
+                decoration: BoxDecoration(
+                    color: AppColors.grayItems,
+                    borderRadius: BorderRadius.circular(AppSize.s02)),
+              ),
             ));
           }else{
           realDebugPrint('We not found it');

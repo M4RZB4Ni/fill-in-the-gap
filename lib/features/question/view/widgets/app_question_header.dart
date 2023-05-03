@@ -17,7 +17,7 @@ class APPQuestionHeader extends StatefulWidget{
   /// likes count as int
   final int likesCount;
 
-  /// likes count as int
+  /// value of progress indicator as double
   final double progressValue;
 }
 

@@ -16,5 +16,7 @@ class AppSpacing {
   static const EdgeInsets s24Horizontal = EdgeInsets.only(right: 24,left: 24);
   static const EdgeInsets s2Horizontal = EdgeInsets.only(right: 2,left: 2);
   static const EdgeInsets s28Top32Bottom = EdgeInsets.only(top: 28,bottom: 32);
+  static const EdgeInsets s11Top24Horizontal7Bottom = EdgeInsets.only(top: 11,bottom: 7,left: 24,right: 24);
+  static const EdgeInsets s24Left24Top = EdgeInsets.only(left: 24,top: 24);
 
 }

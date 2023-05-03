@@ -11,12 +11,13 @@ class QuestionsPage extends BaseView<QuestionsController> {
   Widget body(BuildContext context) {
     // TODO: implement body
     return Column(
-      children: const [
-        APPQuestionHeader(),
-        APPQuestionBody()
+      children:  [
+        const APPQuestionHeader(progressValue: 0.5,likesCount: 4),
+         APPQuestionBody(questionText: 'ماهي اللغة التي سوف نستخدمها لبرمجة أساس المشروع؟',fileName: 'index.html',controller: controller),
+
       ],
     );
-    // return Column(
+    // Column(
     //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
     //   children: [
     //     SizedBox(

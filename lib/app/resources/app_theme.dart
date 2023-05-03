@@ -8,7 +8,7 @@ class AppThemes {
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: AppColors.secondary,
         ),
-        disabledColor: AppColors.disabledButton,
+        disabledColor: AppColors.grey200,
 
         scaffoldBackgroundColor: AppColors.background,
         textTheme: TextTheme(

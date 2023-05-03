@@ -38,7 +38,6 @@ class APPCourseItem extends StatelessWidget{
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               status ? const CircularProgressIndicator(color: AppColors.primaryLight,value: 0.3):SvgPicture.asset(AppIcons.ASSET_LOCK),
-
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
             children: [
