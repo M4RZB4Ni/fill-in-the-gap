@@ -34,8 +34,9 @@ class QuestionsController extends BaseController {
     super.onInit();
   }
 
-  void findItemsAreBlank(String item)
+  void findItemsAreBlank(int index)
   {
+    var item=interactionList[index];
     deletedItem.add([interactionList.indexOf(item),item]);
     logicItems.insert(visualItems.indexWhere((element) => element is Expanded),item);
 
@@ -62,6 +63,7 @@ class QuestionsController extends BaseController {
           // width: AppSize.s18,
           // height: AppSize.s22,
           margin: AppSpacing.s2Horizontal,
+          constraints: BoxConstraints(minWidth: 18.w,minHeight: 22.h),
           decoration: BoxDecoration(
               color: AppColors.grayItems,
               borderRadius: BorderRadius.circular(AppSize.s02)),

@@ -1,6 +1,7 @@
 import 'package:fill_in_the_gap/app/base/base_view.dart';
 import 'package:fill_in_the_gap/features/question/domain/controllers/questions_controller.dart';
 import 'package:fill_in_the_gap/features/question/view/widgets/app_question_body.dart';
+import 'package:fill_in_the_gap/features/question/view/widgets/app_question_bottom.dart';
 import 'package:fill_in_the_gap/features/question/view/widgets/app_question_header.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +12,24 @@ class QuestionsPage extends BaseView<QuestionsController> {
   Widget body(BuildContext context) {
     // TODO: implement body
     return Column(
-      children:  [
-        const APPQuestionHeader(progressValue: 0.5,likesCount: 4),
-         APPQuestionBody(questionText: 'ماهي اللغة التي سوف نستخدمها لبرمجة أساس المشروع؟',fileName: 'index.html',controller: controller),
-
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Column(
+          children: [
+            const APPQuestionHeader(progressValue: 0.5, likesCount: 4),
+            APPQuestionBody(
+                questionText:
+                    'ماهي اللغة التي سوف نستخدمها لبرمجة أساس المشروع؟',
+                fileName: 'index.html',
+                controller: controller),
+          ],
+        ),
+        APPQuestionBottom(
+          interactionList: controller.interactionList,
+          onTabAnswers: (p0) =>
+              controller.findItemsAreBlank(p0),
+          onTabClean: () => controller.ctrlZ(),
+        )
       ],
     );
     // Column(
