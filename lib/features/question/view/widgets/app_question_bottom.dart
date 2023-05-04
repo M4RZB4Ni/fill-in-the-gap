@@ -15,12 +15,14 @@ class APPQuestionBottom extends StatefulWidget {
     return APPQuestionBottomState();
   }
 
-  // final QuestionsController questionsController;
 
-
+  /// list of interactions as List<String>
   final  List<String> interactionList;
 
+  /// a function which accept int as parameter to pass the index of each item to handle on interaction items click
   final Function(int) onTabAnswers;
+
+  /// a function which cleans all answers
   final Function() onTabClean;
 }
 
