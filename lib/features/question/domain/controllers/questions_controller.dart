@@ -9,6 +9,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class QuestionsController extends BaseController {
+
+  
+
   String test = '<div> Orchestrator calculate orchid Specialist EXE </div>';
   late List<String> list;
    RxList<String> interactionList = [

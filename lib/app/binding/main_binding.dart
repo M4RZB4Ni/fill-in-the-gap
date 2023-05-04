@@ -14,6 +14,9 @@ class MainBinding implements Bindings {
     QuestionsBinding().dependencies();
 
     Get.lazyPut<LocalStorage>(StorageService.new);
+
+    /// we do not need connect to internet in this project but I made this class
+    /// to show coverage of this architect
     Get.lazyPut<RestClient>(
       RestClient.new,
       fenix: true,

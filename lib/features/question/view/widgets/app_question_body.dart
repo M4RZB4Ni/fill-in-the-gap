@@ -2,13 +2,12 @@ import 'package:fill_in_the_gap/app/resources/app_colors.dart';
 import 'package:fill_in_the_gap/app/resources/app_size.dart';
 import 'package:fill_in_the_gap/app/resources/app_spacing.dart';
 import 'package:fill_in_the_gap/app/resources/app_text_style.dart';
-import 'package:fill_in_the_gap/features/question/domain/controllers/questions_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class APPQuestionBody extends StatefulWidget {
-  const APPQuestionBody({super.key, required this.questionText, required this.fileName, required this.controller});
+  const APPQuestionBody({super.key, required this.questionText, required this.fileName, required this.visualItems});
 
   /// question text as String
   final String questionText;
@@ -17,7 +16,7 @@ class APPQuestionBody extends StatefulWidget {
   final String fileName;
 
   /// questionController for pass logic
-  final QuestionsController controller;
+  final RxList<Widget> visualItems;
 
   @override
   State<StatefulWidget> createState() {
@@ -57,13 +56,13 @@ class APPQuestionBodyState extends State<APPQuestionBody> {
             children: [
               SizedBox(
                   height: AppSize.s45.h,
-                  child: Obx(() => Padding(
+                  child: Padding(
                     padding: AppSpacing.s24Left24Top,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
-                      children: widget.controller.visualItems,
+                      children: widget.visualItems,
                     ),
-                  ))),
+                  )),
              /* SizedBox(
                   height: 100,
                   width: double.maxFinite,

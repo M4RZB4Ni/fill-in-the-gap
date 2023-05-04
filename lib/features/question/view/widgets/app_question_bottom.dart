@@ -8,7 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class APPQuestionBottom extends StatefulWidget {
-  const APPQuestionBottom({super.key, required this.interactionList, required this.onTabAnswers, required this.onTabClean});
+  const APPQuestionBottom({super.key, required this.interactionList, required this.onTabAnswers, required this.onTabClean, required this.onTabCheckResult});
 
   @override
   State<StatefulWidget> createState() {
@@ -24,6 +24,9 @@ class APPQuestionBottom extends StatefulWidget {
 
   /// a function which cleans all answers
   final Function() onTabClean;
+
+  /// a function which check user result
+  final Function() onTabCheckResult;
 }
 
 class APPQuestionBottomState extends State<APPQuestionBottom> {
@@ -40,7 +43,7 @@ class APPQuestionBottomState extends State<APPQuestionBottom> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              APPCircleButton(child: SvgPicture.asset(AppIcons.ASSET_PLAY)),
+              GestureDetector(child: APPCircleButton(child: SvgPicture.asset(AppIcons.ASSET_PLAY)),onTap: () => widget.onTabCheckResult(),),
               Row(
                 children: [
                   GestureDetector(child: SvgPicture.asset(AppIcons.ASSET_ROTATE),onTap: () {},),
