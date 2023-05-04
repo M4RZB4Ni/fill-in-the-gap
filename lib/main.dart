@@ -1,4 +1,5 @@
 import 'package:fill_in_the_gap/app/binding/main_binding.dart';
+import 'package:fill_in_the_gap/app/messages/app_messages.dart';
 import 'package:fill_in_the_gap/app/resources/app_theme.dart';
 import 'package:fill_in_the_gap/app/routes/app_pages.dart';
 import 'package:fill_in_the_gap/app/routes/app_routes.dart';
@@ -17,17 +18,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(builder: (context, child) => GetMaterialApp(
-      localizationsDelegates: [
-        DefaultMaterialLocalizations.delegate
-      ],
-      title: 'Fill in the gap App',
+      title: AppMessage.title,
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.courses,
       theme: AppThemes().lightTheme,
       defaultTransition: Transition.fade,
       initialBinding: MainBinding(),
-      supportedLocales: const [Locale('fa','IR')],
-      fallbackLocale: const Locale('fa','IR'),
+      supportedLocales: const [Locale('en')],
+      fallbackLocale: const Locale('en'),
       getPages: AppPages().pages,
     ),);
   }

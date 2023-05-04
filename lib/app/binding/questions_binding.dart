@@ -8,7 +8,7 @@ class QuestionsBinding extends Bindings{
   void dependencies() {
 
     Get.lazyPut<QuestionsController>(
-          () => QuestionsController(),
+          () => QuestionsController(Get.find<QuestionsRepository>()),
       fenix: true,
     );
     Get.lazyPut<QuestionsRepository>(

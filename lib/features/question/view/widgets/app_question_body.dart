@@ -55,14 +55,11 @@ class APPQuestionBodyState extends State<APPQuestionBody> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                  height: AppSize.s45.h,
-                  child: Padding(
-                    padding: AppSpacing.s24Left24Top,
-                    child: ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: widget.visualItems,
-                    ),
-                  )),
+                  height: AppSize.s22.h,
+                  child: Obx(() => ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: widget.visualItems,
+                  ))),
              /* SizedBox(
                   height: 100,
                   width: double.maxFinite,
