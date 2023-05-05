@@ -116,7 +116,6 @@ class QuestionsController extends BaseController {
     if(answer==question)
       {
         showPostInteraction(true);
-
       }else{
       showPostInteraction(false);
 
