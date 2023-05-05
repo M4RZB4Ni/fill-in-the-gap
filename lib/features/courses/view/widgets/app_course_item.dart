@@ -29,8 +29,8 @@ class APPCourseItem extends StatelessWidget{
       onTap: status ? onTab : null,
       child: Container(
         width: double.maxFinite,
-        height: AppSize.s84.h,
-        margin: AppSpacing.s16V24H.r,
+        height: AppSize.s90.h,
+        margin: AppSpacing.s16V20H.r,
         padding: AppSpacing.s16All.r,
         decoration: BoxDecoration(color: AppColors.pureWhite,borderRadius: BorderRadius.circular(AppSize.s08.r)),
         child: Row(

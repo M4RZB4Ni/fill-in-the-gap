@@ -8,7 +8,6 @@ class CoursesPage extends BaseView<CoursesController>{
 
   @override
   Widget body(BuildContext context) {
-    // TODO: implement body
     return ListView(
       children:  [
         APPCourseItem(title: 'أساسيات HTML',subTitle: 'إنشاء صفحات الويب باستخدام علامات HTML',status: true,onTab:  () => controller.handleOnClick,),

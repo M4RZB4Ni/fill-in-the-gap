@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(builder: (context, child) => GetMaterialApp(
       title: AppMessage.title,
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.courses,
+      initialRoute: Routes.mainParent,
       theme: AppThemes().lightTheme,
       defaultTransition: Transition.fade,
       initialBinding: MainBinding(),

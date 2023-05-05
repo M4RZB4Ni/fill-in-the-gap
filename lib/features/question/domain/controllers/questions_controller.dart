@@ -104,8 +104,18 @@ class QuestionsController extends BaseController {
   }
 
   void checkAnswer() {
+    realDebugPrint('checkAnswer');
     var answer = logicItems.join(' ');
-    realDebugPrint('answer is $answer');
+    var question = questionInList.join(' ');
+    if(answer==question)
+      {
+        realDebugPrint('answer is  ok $answer');
+        realDebugPrint('answer is  ok $question');
+
+      }else{
+      realDebugPrint('answer is  not ok $answer');
+      realDebugPrint('answer is  not ok $question');
+    }
   }
 
   Widget? processQuestion() {

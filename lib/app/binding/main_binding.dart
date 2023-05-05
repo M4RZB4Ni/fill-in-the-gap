@@ -1,5 +1,6 @@
 
 import 'package:fill_in_the_gap/app/binding/courses_binding.dart';
+import 'package:fill_in_the_gap/app/binding/main_parent_binding.dart';
 import 'package:fill_in_the_gap/app/binding/questions_binding.dart';
 import 'package:fill_in_the_gap/data/local_storage/storege_service.dart';
 import 'package:fill_in_the_gap/data/network/networking.dart';
@@ -12,6 +13,7 @@ class MainBinding implements Bindings {
 
     CoursesBinding().dependencies();
     QuestionsBinding().dependencies();
+    MainParentBinding().dependencies();
 
     Get.lazyPut<LocalStorage>(StorageService.new);
 

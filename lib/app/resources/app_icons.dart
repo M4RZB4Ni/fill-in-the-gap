@@ -15,5 +15,6 @@ class AppIcons {
   static const String ASSET_TEACHER = '$iconPrefix/teacher.svg';
   static const String ASSET_ROTATE = '$iconPrefix/rotate.svg';
   static const String ASSET_REMOVE = '$iconPrefix/remove.png';
+  static const String ASSET_CUP = '$iconPrefix/cup.svg';
 
 }

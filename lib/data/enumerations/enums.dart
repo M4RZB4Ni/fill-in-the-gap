@@ -7,3 +7,10 @@ enum HttpRequestType {
   DELETE,
   PATCH
 }
+
+enum MainParentType {
+  ALDOROS,
+  RAHLATAK,
+  ALMANTADY,
+  SAFHATI,
+}
