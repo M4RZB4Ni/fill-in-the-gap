@@ -22,5 +22,8 @@ class AppSpacing {
   static final EdgeInsets s28Top32Bottom = EdgeInsets.only(top: 28.r,bottom: 32.r);
   static final EdgeInsets s11Top24Horizontal7Bottom = EdgeInsets.only(top: 11.r,bottom: 7,left: 24.r,right: 24.r);
   static final EdgeInsets s24Left24Top = EdgeInsets.only(left: 24.r,top: 24.r);
-
+  static final EdgeInsets s20H12V = EdgeInsets.symmetric(
+    horizontal: 20.r,
+    vertical: 12.r,
+  );
 }

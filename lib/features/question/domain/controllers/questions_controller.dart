@@ -1,6 +1,8 @@
 import 'package:fill_in_the_gap/app/base/base_controller.dart';
 import 'package:fill_in_the_gap/app/messages/printers.dart';
 import 'package:fill_in_the_gap/data/data_models/questions/interaction/interaction_data_model.dart';
+import 'package:fill_in_the_gap/data/data_models/questions/post_interaction/post_interaction_data_model.dart';
+import 'package:fill_in_the_gap/features/general_components/app_snack_bar.dart';
 import 'package:fill_in_the_gap/features/question/domain/repositories/questions_repository.dart';
 import 'package:fill_in_the_gap/features/question/view/widgets/app_gray_box.dart';
 import 'package:fill_in_the_gap/features/question/view/widgets/app_stick_answer.dart';
@@ -20,7 +22,7 @@ class QuestionsController extends BaseController {
 
   RxList<Widget> visualItems = List<Widget>.empty(growable: false).obs;
   RxList<String> logicItems = List<String>.empty(growable: false).obs;
-
+  late List<PostInteractionDataModel> _postInteractionDataModel;
   late String fileName;
 
   QuestionsController(this._repository);
@@ -52,6 +54,7 @@ class QuestionsController extends BaseController {
         prepareInteractions(data.interactionModule);
         setFileName(data.interactionModule.files.first.name);
         processQuestion();
+        setPostInteractionModel(data.postInteraction);
         hideLoading();
       },
       failure: (error) {
@@ -62,6 +65,9 @@ class QuestionsController extends BaseController {
 
   void setFileName(String fileName) {
     this.fileName = fileName;
+  }
+  void setPostInteractionModel(List<PostInteractionDataModel> data) {
+    _postInteractionDataModel = data;
   }
 
   void setQuestionList(String question) {
@@ -109,12 +115,11 @@ class QuestionsController extends BaseController {
     var question = questionInList.join(' ');
     if(answer==question)
       {
-        realDebugPrint('answer is  ok $answer');
-        realDebugPrint('answer is  ok $question');
+        showPostInteraction(true);
 
       }else{
-      realDebugPrint('answer is  not ok $answer');
-      realDebugPrint('answer is  not ok $question');
+      showPostInteraction(false);
+
     }
   }
 
@@ -132,5 +137,16 @@ class QuestionsController extends BaseController {
     realDebugPrint('logicItems $logicItems');
 
     return null;
+  }
+
+  void showPostInteraction(bool correctAnswer)
+  {
+    if(correctAnswer)
+      {
+        APPSnackBar().snackBar(title:_postInteractionDataModel[0].text, message: _postInteractionDataModel[0].text);
+      }else{
+      APPSnackBar().snackBar(title:_postInteractionDataModel[1].text, message: _postInteractionDataModel[1].text);
+
+    }
   }
 }

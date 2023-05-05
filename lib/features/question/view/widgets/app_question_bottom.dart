@@ -27,7 +27,7 @@ class APPQuestionBottom extends StatefulWidget {
   final Function() onTabClean;
 
   /// a function which check user result
-  final Function onTabCheckResult;
+  final Function() onTabCheckResult;
 
   /// restorePages
   final Function() onTabRestore;
@@ -47,7 +47,7 @@ class APPQuestionBottomState extends State<APPQuestionBottom> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              APPCircleButton(onTab: widget.onTabCheckResult,child: SvgPicture.asset(AppIcons.ASSET_PLAY),),
+              APPCircleButton(onTab: () => widget.onTabCheckResult(),child: SvgPicture.asset(AppIcons.ASSET_PLAY),),
               Row(
                 children: [
                   GestureDetector(child: SvgPicture.asset(AppIcons.ASSET_ROTATE),onTap: () => widget.onTabRestore(),),

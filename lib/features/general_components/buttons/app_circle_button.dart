@@ -7,7 +7,7 @@ class APPCircleButton extends StatelessWidget{
   const APPCircleButton({super.key, this.onTab, this.backgroundColor=AppColors.primaryLight, this.foregroundColor=AppColors.pink, required this.child});
 
   ///onTab as Function
-  final Function? onTab;
+  final Function()? onTab;
 
   ///Background Color as Color
   final Color backgroundColor;
@@ -21,7 +21,7 @@ class APPCircleButton extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed:() => realDebugPrint('ssss'),
+      onPressed:() => onTab!(),
       style: ElevatedButton.styleFrom(
         shape: const CircleBorder(),
         padding: AppSpacing.s20All,
